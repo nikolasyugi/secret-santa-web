@@ -1,0 +1,36 @@
+header#main-header {
+    position: fixed;
+    width: 100%;
+    height: 72px;
+    top: 0px;
+    background: #20232a;
+    border-bottom: 1px solid #09d3ac;
+}
+
+header#main-header .header-content {
+    max-width: 980px;
+    margin: 0 auto;
+    height: 72px;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    color: #09d3ac;
+    justify-content: space-between;
+}
+
+div .logo-content {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    color: #09d3ac;
+    justify-content: space-between;
+}
+
+img {
+    width: 30px;
+    padding: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}

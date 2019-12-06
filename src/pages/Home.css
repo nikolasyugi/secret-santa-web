@@ -1,0 +1,72 @@
+div#home-content {
+    width: 100%;
+    max-width: 980px;
+    margin: 92px auto;
+}
+
+h1 {
+    color: #09d3ac;
+}
+
+input {
+    box-sizing: border-box;
+}
+
+div#home-content button, input {
+    background: none;
+    border: 1px solid #09d3ac;
+    border-radius: 15px;
+    color: #09d3ac;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+}
+
+div#home-content button {
+    cursor: pointer;
+}
+
+div#home-content button:hover {
+    color: #ffffff;
+    background: #09d3ac;
+}
+
+div#access-draw-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+div#access-draw-container input {
+    grid-column: 1/4;
+}
+
+div .access-draw-container button {
+    grid-column: 4/5;
+}
+
+div .participant-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.name {
+    grid-column: 1/6;
+}
+
+.email {
+    grid-column: 6/11;
+}
+
+.add-button {
+    grid-column: 11/12;
+}
+
+.remove-button {
+    grid-column: 12/13;
+}
