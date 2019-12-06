@@ -78,9 +78,8 @@ class Home extends Component {
     }
 
     handleSubmitCode = async () => {
-        console.table(this.state.code)
-        const response = await api.post("access", this.state.code);
-        console.log(response)
+        // const response = await api.post("access", this.state.code);
+        this.props.history.push(`/friend?code=${this.state.code}`)
     }
 
     handleSubmit = async () => {
@@ -88,9 +87,7 @@ class Home extends Component {
             name: this.state.drawName,
             participants: this.state.participants
         }
-        console.table(body)
         const response = await api.post("draw", body);
-        console.log(response)
     }
 
     render() {
@@ -99,7 +96,9 @@ class Home extends Component {
                 <h1>Acessar sorteio</h1>
                 <div id="access-draw-container">
                     <input type="text" name="code" autoComplete="off" placeholder="Código" onChange={this.handleCode} />
-                    <button onClick={this.handleSubmitCode}>Acessar Sorteio</button>
+                    {/* <Link to="/friend"> */}
+                        <button onClick={this.handleSubmitCode}>Acessar Sorteio</button>
+                    {/* </Link> */}
                 </div>
                 <h1>Novo sorteio</h1>
                 <div id="make-draw">

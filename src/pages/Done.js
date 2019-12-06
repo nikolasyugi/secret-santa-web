@@ -8,7 +8,7 @@ class Done extends Component {
 
     render() {
         return (
-            <div id="page-wrapper">
+            <div id="done-wrapper">
                 <Link to="/">
                     <FontAwesomeIcon icon={faChevronLeft} className="back-chevron"></FontAwesomeIcon>
                 </Link>

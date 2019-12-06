@@ -1,4 +1,4 @@
-div#done-wrapper {
+div#friend-wrapper {
     width: 90%;
     max-width: 980px;
     margin: 0 auto;
@@ -11,29 +11,14 @@ div#done-wrapper {
     box-sizing: border-box;
 }
 
-div#done-wrapper .back-chevron {
-    position: absolute;
-    top: 112px;
-    left: 50px;
-    cursor: pointer;
-    color: #09d3ac;
-    padding: 5px;
-}
-
-div#done-wrapper p {
+div#friend-wrapper p {
     color: #09d3ac;
     margin: 45px 5px;
 }
 
-.new-draw-link {
-    width: 50%;
-}
-
-div#done-wrapper button {
-    background: none;
+.show, .no-show {
     border: 1px solid #09d3ac;
     border-radius: 15px;
-    color: #09d3ac;
     font-size: 14px;
     outline: none;
     width: 100%;
@@ -42,7 +27,12 @@ div#done-wrapper button {
     cursor: pointer;
 }
 
-div#done-wrapper button:hover {
-    color: #ffffff;
+.no-show {
     background: #09d3ac;
+    color: #ffffff;
+}
+
+.show {
+    background: none;
+    color: #09d3ac;
 }
