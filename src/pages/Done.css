@@ -1,0 +1,48 @@
+div#page-wrapper {
+    width: 90%;
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+div#page-wrapper .back-chevron {
+    position: absolute;
+    top: 112px;
+    left: 50px;
+    cursor: pointer;
+    color: #09d3ac;
+    padding: 5px;
+}
+
+p {
+    color: #09d3ac;
+    margin: 45px 5px;
+}
+
+.new-draw-link {
+    width: 50%;
+}
+
+button {
+    background: none;
+    border: 1px solid #09d3ac;
+    border-radius: 15px;
+    color: #09d3ac;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #ffffff;
+    background: #09d3ac;
+}
