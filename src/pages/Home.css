@@ -1,5 +1,5 @@
 div#home-content {
-    width: 100%;
+    width: 90%;
     max-width: 980px;
     margin: 92px auto;
 }
@@ -37,7 +37,7 @@ div#access-draw-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 10px;
 }
 
 div#access-draw-container input {
@@ -52,7 +52,7 @@ div .participant-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr;
-    grid-column-gap: 20px;
+    grid-column-gap: 10px;
 }
 
 .name {
