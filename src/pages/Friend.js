@@ -25,7 +25,7 @@ class Done extends Component {
         return (
             <div id="friend-wrapper">
                 <h1>Seu amigo secreto</h1>
-                <p>Olá {this.state.name}! Clique no botão abaixo para visualizar seu amigo secreto</p>
+                <p>Olá <b>{this.state.name}</b>! Clique no botão abaixo para visualizar seu amigo secreto</p>
                 {this.state.showButton ? <button onClick={this.toggleFriend} className="show">{this.state.friend}</button> : <button onClick={this.toggleFriend} className="no-show">Visualizar amigo secreto</button>}
             </div>
         );
