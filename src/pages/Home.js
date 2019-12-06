@@ -78,7 +78,6 @@ class Home extends Component {
     }
 
     handleSubmitCode = async () => {
-        // const response = await api.post("access", this.state.code);
         this.props.history.push(`/friend?code=${this.state.code}`)
     }
 
@@ -87,7 +86,7 @@ class Home extends Component {
             name: this.state.drawName,
             participants: this.state.participants
         }
-        const response = await api.post("draw", body);
+        await api.post("draw", body);
     }
 
     render() {
