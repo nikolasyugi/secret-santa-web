@@ -4,14 +4,6 @@ div#home-content {
     margin: 92px auto;
 }
 
-h1 {
-    color: #09d3ac;
-}
-
-input {
-    box-sizing: border-box;
-}
-
 div#home-content button, input {
     background: none;
     border: 1px solid #09d3ac;
