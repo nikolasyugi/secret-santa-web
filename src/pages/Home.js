@@ -3,6 +3,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import api from "../services/api"
+import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -101,7 +102,9 @@ class Home extends Component {
                             <button className="remove-button" onClick={() => this.handleRemove(participant)}><FontAwesomeIcon icon={faTrash} /></button>
                         </div>
                     ))}
-                    <button type="submit" id="draw-button" onClick={this.handleSubmit}>Sortear</button>
+                    <Link to="/done">
+                        <button type="submit" id="draw-button" onClick={this.handleSubmit}>Sortear</button>
+                    </Link>
                 </div>
             </div>
         );
