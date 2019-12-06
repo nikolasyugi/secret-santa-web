@@ -10,6 +10,7 @@ import "./Home.css";
 class Home extends Component {
 
     state = {
+        drawName: "",
         participants: [{
             id: 1,
             name: "",
@@ -52,6 +53,10 @@ class Home extends Component {
 
     }
 
+    handleDrawName = e => {
+        this.setState({ drawName: e.target.value })
+    }
+
     handleChangeName = (e, participant) => {
         this.setState({
             participants: this.state.participants.map(p => {
@@ -79,8 +84,12 @@ class Home extends Component {
     }
 
     handleSubmit = async () => {
-        console.table(this.state.participants)
-        const response = await api.post("draw", this.state.participants);
+        const body = {
+            name: this.state.drawName,
+            participants: this.state.participants
+        }
+        console.table(body)
+        const response = await api.post("draw", body);
         console.log(response)
     }
 
@@ -89,11 +98,12 @@ class Home extends Component {
             <div id="home-content">
                 <h1>Acessar sorteio</h1>
                 <div id="access-draw-container">
-                    <input type="text" name="code" placeholder="Código" onChange={this.handleCode} />
+                    <input type="text" name="code" autoComplete="off" placeholder="Código" onChange={this.handleCode} />
                     <button onClick={this.handleSubmitCode}>Acessar Sorteio</button>
                 </div>
                 <h1>Novo sorteio</h1>
                 <div id="make-draw">
+                    <input type="text" name="drawName" autoComplete="off" placeholder="Nome do sorteio" onChange={this.handleDrawName} />
                     {this.state.participants.map(participant => (
                         <div className="participant-container" key={participant.id}>
                             <input className="name" name={`name${participant.id}`} type="name" placeholder={`Participante ${participant.id}`} onChange={(e) => this.handleChangeName(e, participant)} />

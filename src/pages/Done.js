@@ -12,8 +12,8 @@ class Done extends Component {
                 <Link to="/">
                     <FontAwesomeIcon icon={faChevronLeft} className="back-chevron"></FontAwesomeIcon>
                 </Link>
-                <h1>Parabéns!</h1>
-                <p>O seu sorteio foi realizado e um e-mail foi enviado aos participantes.</p>
+                <h1>Sorteio realizado com sucesso!</h1>
+                <p>Um e-mail foi enviado aos participantes com instruções para descobrir a pessoa que cada um deve presentear.</p>
                 <Link to="/" className="new-draw-link">
                     <button onClick={this.handleSubmitCode}>Novo Sorteio</button>
                 </Link>
