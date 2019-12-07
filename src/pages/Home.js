@@ -3,7 +3,6 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import api from "../services/api"
-import { Link } from "react-router-dom";
 
 import "./Home.css";
 
@@ -78,7 +77,11 @@ class Home extends Component {
     }
 
     handleSubmitCode = async () => {
-        this.props.history.push(`/friend?code=${this.state.code}`)
+        if (this.state.code !== "") {
+            this.props.history.push(`/friend?code=${this.state.code}`)
+        } else {
+            alert("Insira um código");
+        }
     }
 
     handleSubmit = async () => {
@@ -86,7 +89,12 @@ class Home extends Component {
             name: this.state.drawName,
             participants: this.state.participants
         }
-        await api.post("draw", body);
+        if (this.state.drawName !== "" && this.state.participants.filter(p => (p.name !== "" && p.email !== "")).length === this.state.participants.length) {
+            this.props.history.push("/done")
+            await api.post("draw", body);
+        } else {
+            alert("Preencha todos os campos");
+        }
     }
 
     render() {
@@ -95,9 +103,7 @@ class Home extends Component {
                 <h1>Acessar sorteio</h1>
                 <div id="access-draw-container">
                     <input type="text" name="code" autoComplete="off" placeholder="Código" onChange={this.handleCode} />
-                    {/* <Link to="/friend"> */}
-                        <button onClick={this.handleSubmitCode}>Acessar Sorteio</button>
-                    {/* </Link> */}
+                    <button onClick={this.handleSubmitCode}>Acessar Sorteio</button>
                 </div>
                 <h1>Novo sorteio</h1>
                 <div id="make-draw">
@@ -110,9 +116,7 @@ class Home extends Component {
                             <button className="remove-button" onClick={() => this.handleRemove(participant)}><FontAwesomeIcon icon={faTrash} /></button>
                         </div>
                     ))}
-                    <Link to="/done">
-                        <button type="submit" id="draw-button" onClick={this.handleSubmit}>Sortear</button>
-                    </Link>
+                    <button type="submit" id="draw-button" onClick={this.handleSubmit}>Sortear</button>
                 </div>
             </div>
         );
