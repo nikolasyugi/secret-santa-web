@@ -6,14 +6,21 @@ div#home-content {
 
 div#home-content button, input {
     background: none;
-    border: 1px solid #09d3ac;
     border-radius: 15px;
-    color: #09d3ac;
     font-size: 14px;
     outline: none;
+    border: 1px solid #ffffff;
     width: 100%;
     padding: 15px;
     margin: 10px auto;
+}
+
+div#home-content button {
+    color: #09d3ac;
+}
+
+div#home-content input {
+    color: #ffffff;
 }
 
 div#home-content button:hover {
@@ -52,6 +59,7 @@ div .participant-container {
 }
 
 .add-button {
+    border: 1px solid white;
     grid-column: 11/12;
 }
 

@@ -18,9 +18,8 @@ div#friend-wrapper p {
 
 div#friend-wrapper .code-button, input {
     background: none;
-    border: 1px solid #09d3ac;
+    border: 1px solid #ffffff;
     border-radius: 15px;
-    color: #09d3ac;
     font-size: 14px;
     outline: none;
     width: 100%;
@@ -28,8 +27,16 @@ div#friend-wrapper .code-button, input {
     margin: 10px auto;
 }
 
+div#friend-wrapper button {
+    color: #09d3ac;
+}
+
+div#friend-wrapper input {
+    color: #ffffff;
+}
+
 .show, .no-show {
-    border: 1px solid #09d3ac;
+    border: 1px solid #ffffff;
     border-radius: 15px;
     font-size: 14px;
     outline: none;
@@ -40,7 +47,7 @@ div#friend-wrapper .code-button, input {
 
 .no-show {
     background: #09d3ac;
-    color: #ffffff;
+    color: #ffffff !important;
 }
 
 .show {

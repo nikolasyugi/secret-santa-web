@@ -46,6 +46,7 @@ class Done extends Component {
     handleSubmitCode = async (e) => {
         if (this.state.code !== "") {
             this.findCode(this.state.code);
+            this.props.history.push(`/friend?code=${this.state.code}`)
         } else {
             alert("Insira um código");
         }
