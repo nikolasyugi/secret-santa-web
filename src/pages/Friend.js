@@ -31,7 +31,7 @@ class Done extends Component {
             if (response.status === 404) {
                 this.setState({ notFound: true })
             }
-            else alert(response.data.message)
+            else response.data ? alert(response.data.message) : alert("Internal server error")
         } else {
             console.log(response)
             this.setState({ notFound: false })

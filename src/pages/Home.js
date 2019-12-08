@@ -94,7 +94,7 @@ class Home extends Component {
             const [, err] = await handle(api.post("draw", body));
             if (err) {
                 const { response } = err;
-                alert(response.data.message)
+                response.data ? alert(response.data.message) : alert("Internal server error")
             } else this.props.history.push("/done")
 
         } else {
