@@ -13,6 +13,7 @@ body {
 button {
   text-transform: uppercase;
   font-weight: 700;
+  cursor: pointer;
 }
 
 input {

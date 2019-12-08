@@ -3,6 +3,7 @@ import { faPlus } from '@fortawesome/free-solid-svg-icons'
 import { faTrash } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import api from "../services/api"
+import handle from "../services/handleError"
 
 import "./Home.css";
 
@@ -90,8 +91,12 @@ class Home extends Component {
             participants: this.state.participants
         }
         if (this.state.drawName !== "" && this.state.participants.filter(p => (p.name !== "" && p.email !== "")).length === this.state.participants.length) {
-            this.props.history.push("/done")
-            await api.post("draw", body);
+            const [, err] = await handle(api.post("draw", body));
+            if (err) {
+                const { response } = err;
+                alert(response.data.message)
+            } else this.props.history.push("/done")
+
         } else {
             alert("Preencha todos os campos");
         }

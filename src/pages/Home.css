@@ -16,10 +16,6 @@ div#home-content button, input {
     margin: 10px auto;
 }
 
-div#home-content button {
-    cursor: pointer;
-}
-
 div#home-content button:hover {
     color: #ffffff;
     background: #09d3ac;

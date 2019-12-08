@@ -16,6 +16,18 @@ div#friend-wrapper p {
     margin: 45px 5px;
 }
 
+div#friend-wrapper .code-button, input {
+    background: none;
+    border: 1px solid #09d3ac;
+    border-radius: 15px;
+    color: #09d3ac;
+    font-size: 14px;
+    outline: none;
+    width: 100%;
+    padding: 15px;
+    margin: 10px auto;
+}
+
 .show, .no-show {
     border: 1px solid #09d3ac;
     border-radius: 15px;
@@ -24,7 +36,6 @@ div#friend-wrapper p {
     width: 100%;
     padding: 15px;
     margin: 10px auto;
-    cursor: pointer;
 }
 
 .no-show {
